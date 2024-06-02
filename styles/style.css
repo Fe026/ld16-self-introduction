@@ -1,0 +1,211 @@
+/* 基本スタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1em;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    --theme-color: #129ed1;
+}
+
+a {
+    text-decoration: none;
+}
+
+header, footer {
+    align-items: center;
+    align-content: center;
+    background-color: #333;
+    color: #eee;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    width: 100dvw;
+}
+
+header {
+    height: 100vh;
+    height: 100dvh;
+}
+
+header video {
+    min-height: 100vh;
+    position: absolute;
+}
+
+.video-overwrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(129, 223, 255, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+}
+
+h1 {
+    color: #eee;
+}
+
+header nav {
+    background: var(--theme-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 1.2rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    height: 3.6rem;
+    width: 100%;
+}
+
+nav ul li a {
+    color: #eee;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 3.6rem;
+    transition: .3s;
+    border-bottom: solid .3rem var(--theme-color);
+}
+
+nav ul li a:hover {
+    border-bottom: solid .3rem #eee;
+}
+
+h2, h3 {
+    color: white;
+    background: var(--theme-color);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* セクション & アーティクルスタイリング */
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 0 0 30px;
+}
+
+section * {
+    border-radius: 8px;
+}
+
+section > h2 {
+    margin: 0 0 30px;
+}
+
+article > h3{
+    margin: 0 0 10px;
+}
+
+section > *:not(h2),
+article > *:not(h3) {
+    margin: 0 30px;
+}
+
+article {
+    margin-bottom: 20px;
+    padding: 0 0 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: block;
+    transition: .3s;
+}
+
+article:hover {
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+}
+
+#profile {
+    position: relative;
+}
+
+#profile img {
+    display: inline-block;
+    width: 300px;
+}
+
+#profile .profile-data {
+    position: absolute;
+    display: inline-block;
+}
+
+.profile-data div p:nth-child(2) {
+    font-size: 2.5rem;
+}
+.profile-data div {
+    margin: 5rem 0 2rem;
+}
+
+.profile-data div + p {
+    font-size: 1.5rem;
+}
+
+.profile-data div + p + p {
+    margin: 0 0 1rem;
+}
+
+.x-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 0 1rem;
+}
+
+.x-scroll > * {
+    flex: 1 0 30vw;
+}
+
+article video,
+article img {
+    width: calc(100% - 60px);
+    margin: 0 30px 10px;
+}
+
+article p {
+    line-height: 1.2rem;
+}
+
+#sns ul {
+    list-style: none;
+}
+
+#sns li {
+    display: inline-block;
+    margin: 0 .5rem;
+}
+
+#sns img {
+    display: block;
+    width: 2.7rem;
+}
+
+footer {
+    font-size: 0.8em;
+    padding: 10px 0;
+}
